@@ -135,6 +135,9 @@ class new():
 		"""
 		
 		if fn.endswith('.mha'): ## Check if the file extension is ".mha"
+
+            ## Order the matrix in the proper way
+            self.data = np.array(self.data, order = "F")
 			
 			## Check if the input matrix is an image or a vf
 			if self.data.ndim == 3:
